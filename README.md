@@ -9,3 +9,4 @@ MNIST数据集的手写数字样例:
 - 1.softmax回归模型用于手写数字图片分类 softmax_regression_model.py
 - 2.单层softmax模型用于手写数字图片识别 onelayer_softmax_regression_model.py
 - 3.BP神经网络模型实现手写数字图片识别 bp_model.py
+- 4.CNN卷积神经网络模型实现手写数字识别 cnn_model.py
