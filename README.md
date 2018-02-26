@@ -1,0 +1,3 @@
+# tensorflow_mnist
+基于tensorflow用各种不同的方法来实现mnist手写数字图片分类
+1.softmax回归模型用于手写数字图片分类
