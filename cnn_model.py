@@ -10,11 +10,16 @@ x = tf.placeholder(tf.float32, shape=[None, 784])
 y_ = tf.placeholder(tf.float32, shape=[None, 10])
 
 # 权重
+# 权重不能初始化为全部相同的值，要将参数进行随机初始化，而不是全部置为0。如果所有参数都用相同的值作为初始值，
+# 那么所有隐藏层单元最终会得到与输入值有关的、相同的函数（也就是说同一层的所有结点都会有相同的激活函数）。
+# 随机初始化的目的是为了使对称失效（symmetry breaking）。
 def weight_variable(shape):
     initial = tf.truncated_normal(shape, stddev=0.1)
     return tf.Variable(initial)
 
 # 偏置
+# 同时在tensorflow的深度网络里面，他们使用了ReLU(Rectified Linear Unites）作为激活函数，
+# 为了避免出现神经元不能被激活（dead neurons）的情况，在这次的训练网络中又加入了一些偏置量。
 def bias_variable(shape):
     initial = tf.constant(0.1, shape=shape)
     return tf.Variable(initial)

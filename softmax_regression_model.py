@@ -1,5 +1,6 @@
 # -*- coding:utf-8 -*-
 # softmax回归模型用于手写数字图片分类
+# 只有输入层和输出层，没有隐含层。是一个没有隐含层的最浅的神经网络
 
 import tensorflow as tf
 from tensorflow.examples.tutorials.mnist import input_data
