@@ -76,8 +76,6 @@ python中的方法，切片函数
 
 """
 
-import os
-import os.path
 from numpy import *
 import operator
 import time
